@@ -18,10 +18,9 @@ function Body() {
   }, []);
 
   return (
-    <div className="h-full">
       <div className="bordered border-gray-200 border-solid m-10 border-2 grid grid-cols-4">
-        {projects.map((project, index) => (
-          <div className="grid grid-rows-6">
+        {projects.map((project) => (
+          <div key={project.Nombre} className="grid grid-rows-5">
             <div>{project.Nombre}</div>
             <div>{project.Descripcion}</div>
             <div>{project.Caracteristicas}</div>
@@ -30,7 +29,6 @@ function Body() {
           </div>
         ))}
       </div>
-    </div>
   );
 }
 
